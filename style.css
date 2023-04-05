@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height:100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+.container{
+    position: relative; /*this is done for overlapping*/
+    height: 100%;
+    display: flex;
+    /*for making text in cntr use flex display then use justify content &align content*/
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1; /*this property is used to overcome the overlap btween images in 3d brings the image of lower layer at the screen*/
+}
+.background{
+    transform: translateZ(-40px); scale: 6;
+   }
+.foreground{
+    transform: translateZ(-20px); scale: 3;
+}
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+h1{
+    position:absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%) ;
+    font-size: 8rem;
+    color: black;
+    text-shadow:0 0 10px;
+}
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+.text{
+    font-size: 2rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.bg{
+      position: relative;
+      width: 100%;
+      background-attachment: fixed; 
+      /* used to fix bg and remaing content moves over it */
+      height: 500px;
+      background-size: cover;
+      background-attachment: fixed;
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg); 
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: .5rem 2.5 rem;
+    color: black;
+    font-size: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    
+} 
